@@ -1,4 +1,4 @@
-package com.example.di.services;
+package com.example.services;
 
 public interface GreetingService {
 

@@ -1,4 +1,4 @@
-package com.example.di.services;
+package com.example.services;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

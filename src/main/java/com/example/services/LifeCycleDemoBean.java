@@ -1,4 +1,4 @@
-package com.example.di.services;
+package com.example.services;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;

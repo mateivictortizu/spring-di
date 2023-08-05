@@ -1,6 +1,6 @@
 package com.example.di.controllers;
 
-import com.example.di.services.ConstructorGreetingService;
+import com.example.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
