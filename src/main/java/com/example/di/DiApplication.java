@@ -1,18 +1,20 @@
 package com.example.di;
 
-import com.example.di.controllers.ConstructorInjectedController;
-import com.example.di.controllers.MyController;
-import com.example.di.controllers.PropertyInjectedController;
-import com.example.di.controllers.SetterInjectedController;
+import com.example.di.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Service;
 
 @SpringBootApplication
 public class DiApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx= SpringApplication.run(DiApplication.class, args);
+
+		i18nController i18nController = (i18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
+
 		MyController myController = (MyController) ctx.getBean("myController");
 		String greeting = myController.sayHello();
 		System.out.println(greeting);
