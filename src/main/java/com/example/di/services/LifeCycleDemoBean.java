@@ -1,5 +1,7 @@
 package com.example.di.services;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.context.ApplicationContext;
@@ -38,5 +40,23 @@ public class LifeCycleDemoBean implements InitializingBean, DisposableBean, Bean
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         System.out.println("## The ApplicationContext has been set");
+    }
+
+    @PostConstruct
+    public void postConstruct(){
+        System.out.println("## The Post Construct annotated method has been created!");
+    }
+
+    @PreDestroy
+    public void preDestroy(){
+        System.out.println("## The Pre Destroy annotated method has been called");
+    }
+
+    public void beforeInit(){
+        System.out.println("## - Before Init - Called by Bean Post Processor");
+    }
+
+    public void afterInit(){
+        System.out.println("## - After init called by Bean Post Processor");
     }
 }
